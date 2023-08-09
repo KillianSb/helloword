@@ -5,6 +5,10 @@
 {% block body %}
     <h1>Toutes les series</h1>
     {% for serie in series %}
-        <a href="/blog/serie/{{ serie.id }}"><div>{{ serie.titre }}</div></a>
+        <div>
+            <a href="{{ path('serie_detail', {'serie': serie.id }) }}">
+                <div>{{ serie.titre }}</div>
+            </a>
+        </div>
     {% endfor %}
 {% endblock %}

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Serie;
 use App\Repository\SerieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,20 +27,20 @@ class SerieController extends AbstractController
     }
 
     #[Route(
-        '/serie/{id}',
+        '/serie/{serie}',
         name: '_detail',
-        requirements: ["id" => "\d+"]
+        requirements: ["serie" => "\d+"]
     )]
     public function detail(
-        SerieRepository $serieRepository,
-        int $id = 50
+/*        SerieRepository $serieRepository,*/
+        Serie $serie
     ): Response
     {
-        dump($id);
+        dump($serie);
 
-        $serie = $serieRepository->findOneBy(
+/*        $serie = $serieRepository->findOneBy(
             ["id" => $id]
-        );
+        );*/
 
         return $this->render(
             'serie/detail.html.twig',

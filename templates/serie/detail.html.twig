@@ -3,6 +3,9 @@
 {% block title %}Hello SerieController!{% endblock %}
 
 {% block body %}
-    <h1>Detail serie id : {{ serie.titre }}</h1>
-    <img src="{{ asset('img/'~serie.image) }}" alt="{{ serie.titre }}">
+    <div class="blockFilm">
+        <h1>Detail de la serie : </h1>
+        <h2>{{ serie.titre }}</h2>
+        <img class="img-film" src="{{ asset('img/'~serie.image) }}" alt="{{ serie.titre }}">
+    </div>
 {% endblock %}
