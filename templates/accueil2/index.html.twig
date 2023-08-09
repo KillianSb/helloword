@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page Accueil 2{% endblock %}
+
+{% block body %}
+    <h1>{{ nom }}</h1>
+    <h2>{{ age }} ans</h2>
+    {% if age >= 50 %}
+        <p>Il est vieux !</p>
+    {% endif %}
+
+    {% set couleurs = ["red","white","blue","orange"] %}
+    <h1>{{ couleurs[1] }}</h1>
+
+    {% for couleur in couleurs %}
+        <div style="background-color: {{ couleur }}">{{ couleur }}</div>
+    {% else %}
+        <p>Pas de couleur !</p>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+    Footer 1
+{% endblock %}

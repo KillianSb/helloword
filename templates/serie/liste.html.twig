@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SerieController!{% endblock %}
+
+{% block body %}
+    <h1>Toutes les series</h1>
+    {% for serie in series %}
+        <a href="/blog/serie/{{ serie.id }}"><div>{{ serie.titre }}</div></a>
+    {% endfor %}
+{% endblock %}

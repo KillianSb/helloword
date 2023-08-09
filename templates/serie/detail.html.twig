@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SerieController!{% endblock %}
+
+{% block body %}
+    <h1>Detail serie id : {{ serie.titre }}</h1>
+    <img src="{{ asset('img/'~serie.image) }}" alt="{{ serie.titre }}">
+{% endblock %}
